@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+
+\title{APM1220: FA 2 - Foundations}
+\author{Sample Geometry and Random Sampling}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 3.1}
+\textbf{Given Data:} The data matrix is given as 
+$X = \begin{bmatrix} 9 & 1 \\ 5 & 3 \\ 1 & 2 \end{bmatrix}$. 
+The matrix $X$ is a $3 \times 2$ matrix, meaning there are $n=3$ observations and $p=2$ variables.
+
+\subsection*{(a) Scatter Plot in $p=2$ Dimensions and Sample Mean}
+To locate the sample mean, we average the columns of the data matrix $X$.
+$$ \bar{x} = \begin{bmatrix} \frac{9+5+1}{3} \\ \frac{1+3+2}{3} \end{bmatrix} = \begin{bmatrix} \frac{15}{3} \\ \frac{6}{3} \end{bmatrix} = \begin{bmatrix} 5 \\ 2 \end{bmatrix} $$
+\textbf{Final Answer (a):} In a $p=2$ dimensional Cartesian plane, the data points are plotted at $(9, 1)$, $(5, 3)$, and $(1, 2)$. The sample mean $\bar{x} = \begin{bmatrix} 5 & 2 \end{bmatrix}'$ acts as the center of gravity and is located at the coordinate $(5, 2)$.
+
+\subsection*{(b) $n=3$-Dimensional Representation and Deviation Vectors}
+We extract the columns of $X$ into $n=3$ dimensional vectors: 
+$y_1 = \begin{bmatrix} 9 & 5 & 1 \end{bmatrix}'$ and $y_2 = \begin{bmatrix} 1 & 3 & 2 \end{bmatrix}'$. 
+
+The mean vectors in 3D space are calculated by multiplying the scalar mean by a $3 \times 1$ vector of ones, $\mathbf{1}$:
+$$ \bar{x}_1 \mathbf{1} = 5 \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 5 \\ 5 \\ 5 \end{bmatrix}, \quad \bar{x}_2 \mathbf{1} = 2 \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\ 2 \\ 2 \end{bmatrix} $$
+Subtracting these (dimensionally conformant $3 \times 1$ vectors) yields the deviation vectors $d_i = y_i - \bar{x}_i \mathbf{1}$:
+$$ d_1 = \begin{bmatrix} 9 \\ 5 \\ 1 \end{bmatrix} - \begin{bmatrix} 5 \\ 5 \\ 5 \end{bmatrix} = \begin{bmatrix} 4 \\ 0 \\ -4 \end{bmatrix}, \quad d_2 = \begin{bmatrix} 1 \\ 3 \\ 2 \end{bmatrix} - \begin{bmatrix} 2 \\ 2 \\ 2 \end{bmatrix} = \begin{bmatrix} -1 \\ 1 \\ 0 \end{bmatrix} $$
+\textbf{Final Answer (b):} The deviation vectors are $d_1 = \begin{bmatrix} 4 & 0 & -4 \end{bmatrix}'$ and $d_2 = \begin{bmatrix} -1 & 1 & 0 \end{bmatrix}'$. In an $n=3$ sketch, these vectors emanate from the tips of the mean vectors $\bar{x}_1 \mathbf{1}$ and $\bar{x}_2 \mathbf{1}$ pointing towards $y_1$ and $y_2$.
+
+\subsection*{(c) Lengths, Angle, and Relation to $S_n$ and $R$}
+The squared lengths of the vectors are given by the inner product $d_i'd_i$ (multiplying a $1 \times 3$ row vector by a $3 \times 1$ column vector yields a scalar):
+$$ L_{d_1}^2 = d_1' d_1 = (4)^2 + (0)^2 + (-4)^2 = 32 \implies L_{d_1} = 4\sqrt{2} $$
+$$ L_{d_2}^2 = d_2' d_2 = (-1)^2 + (1)^2 + (0)^2 = 2 \implies L_{d_2} = \sqrt{2} $$
+The inner product (dot product) of $d_1$ and $d_2$ is:
+$$ d_1' d_2 = (4)(-1) + (0)(1) + (-4)(0) = -4 $$
+The cosine of the angle $\theta$ is:
+$$ \cos(\theta) = \frac{d_1' d_2}{L_{d_1} L_{d_2}} = \frac{-4}{(4\sqrt{2})(\sqrt{2})} = \frac{-4}{8} = -\frac{1}{2} $$
+\textbf{Final Answer (c):} The lengths are $L_{d_1} = 4\sqrt{2}$ and $L_{d_2} = \sqrt{2}$, with $\cos(\theta) = -\frac{1}{2}$. 
+Geometrically, the squared lengths relate to the biased sample variance by $L_{d_i}^2 = n S_{n,ii}$. Thus, $32 = 3 S_{n,11} \implies S_{n,11} = \frac{32}{3}$, and $2 = 3 S_{n,22} \implies S_{n,22} = \frac{2}{3}$. The inner product relates to covariance: $-4 = 3 S_{n,12} \implies S_{n,12} = -\frac{4}{3}$. The cosine of the angle is precisely the sample correlation coefficient: $r_{12} = -\frac{1}{2}$.
+
+\rule{\textwidth}{0.4pt}
+
+\section*{Problem 3.6}
+\textbf{Given Data:} $X = \begin{bmatrix} -1 & 3 & -2 \\ 2 & 4 & 2 \\ 5 & 2 & 3 \end{bmatrix}$ (Dimensions: $3 \times 3$).
+
+\subsection*{(a) Matrix of Deviations and Rank}
+First, compute the mean vector (averaging the columns):
+$$ \bar{x} = \begin{bmatrix} \frac{6}{3} \\ \frac{9}{3} \\ \frac{3}{3} \end{bmatrix} = \begin{bmatrix} 2 \\ 3 \\ 1 \end{bmatrix} $$
+The matrix of means is calculated by multiplying a $3 \times 1$ ones vector by the $1 \times 3$ mean row vector:
+$$ \mathbf{1}\bar{x}' = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \begin{bmatrix} 2 & 3 & 1 \end{bmatrix} = \begin{bmatrix} 2 & 3 & 1 \\ 2 & 3 & 1 \\ 2 & 3 & 1 \end{bmatrix} $$
+Subtracting this from $X$ yields the matrix of deviations:
+$$ X - \mathbf{1}\bar{x}' = \begin{bmatrix} -1-2 & 3-3 & -2-1 \\ 2-2 & 4-3 & 2-1 \\ 5-2 & 2-3 & 3-1 \end{bmatrix} = \begin{bmatrix} -3 & 0 & -3 \\ 0 & 1 & 1 \\ 3 & -1 & 2 \end{bmatrix} $$
+\textbf{Final Answer (a):} The deviation matrix is $X_c = \begin{bmatrix} -3 & 0 & -3 \\ 0 & 1 & 1 \\ 3 & -1 & 2 \end{bmatrix}$. This matrix is \textbf{not} of full rank. The sum of the rows of any mean-corrected data matrix is always the zero vector, which means the rows are linearly dependent. Therefore, the rank is at most $n-1 = 2$.
+
+\subsection*{(b) Sample Covariance Matrix $S$ and Generalized Variance}
+The sample covariance matrix is $S = \frac{1}{n-1} X_c' X_c$. Multiplying the $3 \times 3$ transpose by the $3 \times 3$ deviation matrix:
+$$ X_c' X_c = \begin{bmatrix} -3 & 0 & 3 \\ 0 & 1 & -1 \\ -3 & 1 & 2 \end{bmatrix} \begin{bmatrix} -3 & 0 & -3 \\ 0 & 1 & 1 \\ 3 & -1 & 2 \end{bmatrix} = \begin{bmatrix} 18 & -3 & 15 \\ -3 & 2 & -1 \\ 15 & -1 & 14 \end{bmatrix} $$
+Dividing by $n-1 = 2$:
+$$ S = \begin{bmatrix} 9 & -\frac{3}{2} & \frac{15}{2} \\ -\frac{3}{2} & 1 & -\frac{1}{2} \\ \frac{15}{2} & -\frac{1}{2} & 7 \end{bmatrix} $$
+\textbf{Final Answer (b):} Because the deviation matrix is not of full rank, the covariance matrix $S$ is singular. Thus, the generalized sample variance (the determinant) is $|S| = 0$. Geometrically, this means the sample deviation vectors span a 2-dimensional plane rather than a full 3-dimensional volume, resulting in a hypervolume of zero.
+
+\subsection*{(c) Total Sample Variance}
+The total sample variance is the trace of matrix $S$.
+\textbf{Final Answer (c):} $\text{tr}(S) = s_{11} + s_{22} + s_{33} = 9 + 1 + 7 = 17$.
+
+\rule{\textwidth}{0.4pt}
+
+\section*{Problem 3.9}
+
+\textbf{Corrected Data Matrix:} $X = \begin{bmatrix} 12 & 17 & 29 \\ 18 & 20 & 38 \\ 14 & 16 & 30 \\ 20 & 18 & 38 \\ 16 & 19 & 35 \end{bmatrix}$
+
+\subsection*{(a) Mean Corrected Matrix and Linear Dependence}
+The mean vector is $\bar{x} = \begin{bmatrix} 16 & 18 & 34 \end{bmatrix}'$. Subtracting the mean matrix yields the mean corrected matrix $X_c$:
+$$ X_c = \begin{bmatrix} -4 & -1 & -5 \\ 2 & 2 & 4 \\ -2 & -2 & -4 \\ 4 & 0 & 4 \\ 0 & 1 & 1 \end{bmatrix} $$
+\textbf{Final Answer (a):} Because column 3 is strictly the sum of column 1 and column 2, the columns are linearly dependent. The vector establishing this dependence is $a = \begin{bmatrix} 1 & 1 & -1 \end{bmatrix}'$, such that $X_c a = \mathbf{0}$.
+
+\subsection*{(b) Covariance Matrix $S$ and Rescaling}
+We calculate $S = \frac{1}{n-1}X_c'X_c = \frac{1}{4}X_c'X_c$:
+$$ X_c' X_c = \begin{bmatrix} -4 & 2 & -2 & 4 & 0 \\ -1 & 2 & -2 & 0 & 1 \\ -5 & 4 & -4 & 4 & 1 \end{bmatrix} \begin{bmatrix} -4 & -1 & -5 \\ 2 & 2 & 4 \\ -2 & -2 & -4 \\ 4 & 0 & 4 \\ 0 & 1 & 1 \end{bmatrix} = \begin{bmatrix} 40 & 12 & 52 \\ 12 & 10 & 22 \\ 52 & 22 & 74 \end{bmatrix} $$
+$$ S = \begin{bmatrix} 10 & 3 & 13 \\ 3 & \frac{5}{2} & \frac{11}{2} \\ 13 & \frac{11}{2} & \frac{37}{2} \end{bmatrix} $$
+\textbf{Final Answer (b):} The generalized variance $|S| = 0$ because the matrix $S$ is singular (rank 2). Testing the vector $a$:
+$$ Sa = \begin{bmatrix} 10 & 3 & 13 \\ 3 & \frac{5}{2} & \frac{11}{2} \\ 13 & \frac{11}{2} & \frac{37}{2} \end{bmatrix} \begin{bmatrix} 1 \\ 1 \\ -1 \end{bmatrix} = \begin{bmatrix} 10 + 3 - 13 \\ 3 + \frac{5}{2} - \frac{11}{2} \\ 13 + \frac{11}{2} - \frac{37}{2} \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} $$
+Since $Sa = 0a$, $a$ acts as an eigenvector corresponding to the eigenvalue zero.
+
+\subsection*{(c) Verify Linear Dependence}
+\textbf{Final Answer (c):} For every row $j$ in the corrected data matrix, the relationship $1(x_{j1}) + 1(x_{j2}) - 1(x_{j3}) = 0$ holds perfectly. Thus, linear dependence exists with $a_1=1$, $a_2=1$, and $a_3=-1$.
+
+\rule{\textwidth}{0.4pt}
+
+\section*{Problem 3.18}
+\textbf{Given Data:} Mean vector $\bar{x} = \begin{bmatrix} 0.766 & 0.508 & 0.438 & 0.161 \end{bmatrix}'$ and covariance matrix $S$.
+
+\subsection*{(a) Total Energy Consumption}
+Define the transformation vector $a = \mathbf{1} = \begin{bmatrix} 1 & 1 & 1 & 1 \end{bmatrix}'$.
+Total energy mean:
+$$ \bar{y} = a'\bar{x} = 0.766 + 0.508 + 0.438 + 0.161 = 1.873 = \frac{1873}{1000} $$
+The total variance is the sum of all elements in the $4 \times 4$ matrix $S$:
+$$ s_y^2 = \mathbf{1}' S \mathbf{1} = \sum_{i=1}^4 \sum_{k=1}^4 s_{ik} = 1.760 + 1.398 + 0.510 + 0.245 = 3.913 = \frac{3913}{1000} $$
+\textbf{Final Answer (a):} The sample mean of total energy is $1.873$ and the variance is $3.913$.
+
+\subsection*{(b) Excess Petroleum Over Natural Gas}
+Define the transformation vector $c = \begin{bmatrix} 1 & -1 & 0 & 0 \end{bmatrix}'$. 
+The mean of the excess ($v = x_1 - x_2$) is:
+$$ \bar{v} = c'\bar{x} = 0.766 - 0.508 = 0.258 = \frac{129}{500} $$
+The sample variance is:
+$$ s_v^2 = c'Sc = s_{11} + s_{22} - 2s_{12} = 0.856 + 0.568 - 2(0.635) = 0.154 = \frac{77}{500} $$
+The sample covariance with the total variable $y$ is computed via $c'S\mathbf{1}$, which equals the sum of the first row of $S$ minus the sum of the second row:
+$$ \text{Cov}(v, y) = \sum_{j=1}^4 s_{1j} - \sum_{j=1}^4 s_{2j} = 1.760 - 1.398 = 0.362 = \frac{181}{500} $$
+\textbf{Final Answer (b):} The mean excess is $0.258$, the variance is $0.154$, and the covariance with total energy is $0.362$.
+
+\rule{\textwidth}{0.4pt}
+
+\section*{Problem 3.20}
+\textbf{Given Data:} Dataset of $n=25$ incidents.
+
+\subsection*{(a) Summary Statistics Method}
+Calculating sums from the table: $\sum x_1 = 281.9$ and $\sum x_2 = 435.4$. 
+The individual variable means are:
+$$ \bar{x}_1 = \frac{281.9}{25} = 11.276, \quad \bar{x}_2 = \frac{435.4}{25} = 17.416 $$
+The mean of the difference $d = x_2 - x_1$ is $\bar{d} = 17.416 - 11.276 = 6.14$.
+
+To calculate the variance of the difference from summary statistics, we need $s_{11}$, $s_{22}$, and $s_{12}$:
+$$ \sum x_1^2 = 3732.53 \implies s_{11} = \frac{3732.53 - 25(11.276)^2}{24} = \frac{553.8156}{24} $$
+$$ \sum x_2^2 = 9604.20 \implies s_{22} = \frac{9604.20 - 25(17.416)^2}{24} = \frac{2021.2736}{24} $$
+$$ \sum x_1 x_2 = 4861.90 \implies s_{12} = \frac{4861.90 - 25(11.276)(17.416)}{24} = \frac{-47.668}{24} $$
+Using the linear combination variance formula $s_d^2 = s_{11} + s_{22} - 2s_{12}$:
+$$ s_d^2 = \frac{553.8156 + 2021.2736 - 2(-47.668)}{24} = \frac{2670.44}{24} = \frac{66761}{600} \approx 111.268 $$
+\textbf{Final Answer (a):} Mean difference is exactly $\frac{307}{50} = 6.14$, and the variance is exactly $\frac{66761}{600} \approx 111.268$.
+
+\subsection*{(b) Individual Values Method}
+We transform the bivariate data into a univariate dataset $d_j = x_{j2} - x_{j1}$ for all $j=1, \dots, 25$. 
+Summing the individual differences gives $\sum d_j = 153.5$. 
+$$ \text{Mean } (\bar{d}) = \frac{153.5}{25} = 6.14 $$
+Summing the squared differences gives $\sum d_j^2 = 3612.93$. 
+$$ \text{Variance } (s_d^2) = \frac{\sum d_j^2 - 25(\bar{d})^2}{24} = \frac{3612.93 - 25(6.14)^2}{24} = \frac{2670.44}{24} = \frac{66761}{600} $$
+\textbf{Final Answer (b):} Both the mean and variance computed directly from the individual values match the summary statistics methodology exactly. Mean $= 6.14$ and Variance $= \frac{66761}{600}$.
+
+\end{document}
