@@ -1,0 +1,12 @@
+,cohen_d,VIF_11_vars,selected
+fixed acidity,-1.2934,4.8969,True
+volatile acidity,-2.0015,1.9494,True
+citric acid,0.4428,1.6082,False
+residual sugar,0.8639,7.229,True
+chlorides,-1.386,1.632,True
+free sulfur dioxide,1.2415,2.1355,False
+total sulfur dioxide,2.2775,2.9376,True
+density,-0.985,15.9145,False
+pH,-0.809,2.5365,False
+sulphates,-1.295,1.5415,True
+alcohol,0.0766,4.7821,False

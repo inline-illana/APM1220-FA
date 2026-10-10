@@ -1,0 +1,7 @@
+,std_coef,structure_r,rank_abs_structure
+fixed acidity,-1.5341,-0.3106,5
+volatile acidity,-2.6028,-0.4806,2
+residual sugar,0.0776,0.2075,6
+chlorides,-1.1748,-0.3328,3
+total sulfur dioxide,2.804,0.5469,1
+sulphates,-1.597,-0.311,4

@@ -1,0 +1,7 @@
+,fixed acidity,volatile acidity,residual sugar,chlorides,total sulfur dioxide,sulphates
+fixed acidity,1.0,-0.1494,0.0706,0.0649,0.019,0.0818
+volatile acidity,-0.1494,1.0,0.0448,0.0651,0.0793,-0.1394
+residual sugar,0.0706,0.0448,1.0,0.062,0.3755,-0.0195
+chlorides,0.0649,0.0651,0.062,1.0,0.1296,0.1945
+total sulfur dioxide,0.019,0.0793,0.3755,0.1296,1.0,0.1051
+sulphates,0.0818,-0.1394,-0.0195,0.1945,0.1051,1.0

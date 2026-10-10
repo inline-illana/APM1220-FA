@@ -1,0 +1,122 @@
+var1,var2,r
+free sulfur dioxide,total sulfur dioxide,0.7209
+density,alcohol,-0.6867
+residual sugar,density,0.5525
+residual sugar,total sulfur dioxide,0.4955
+fixed acidity,density,0.4589
+volatile acidity,total sulfur dioxide,-0.4145
+residual sugar,free sulfur dioxide,0.4029
+chlorides,sulphates,0.3956
+volatile acidity,citric acid,-0.378
+volatile acidity,chlorides,0.3771
+chlorides,density,0.3626
+residual sugar,alcohol,-0.3594
+volatile acidity,free sulfur dioxide,-0.3526
+citric acid,pH,-0.3298
+fixed acidity,total sulfur dioxide,-0.3291
+fixed acidity,citric acid,0.3244
+fixed acidity,sulphates,0.2996
+fixed acidity,chlorides,0.2982
+fixed acidity,free sulfur dioxide,-0.2827
+chlorides,total sulfur dioxide,-0.2796
+total sulfur dioxide,sulphates,-0.2757
+volatile acidity,density,0.2713
+residual sugar,pH,-0.2673
+total sulfur dioxide,alcohol,-0.2657
+volatile acidity,pH,0.2615
+density,sulphates,0.2595
+chlorides,alcohol,-0.2569
+fixed acidity,pH,-0.2527
+total sulfur dioxide,pH,-0.2384
+volatile acidity,sulphates,0.226
+fixed acidity,volatile acidity,0.219
+volatile acidity,residual sugar,-0.196
+citric acid,total sulfur dioxide,0.1952
+chlorides,free sulfur dioxide,-0.195
+pH,sulphates,0.1921
+free sulfur dioxide,sulphates,-0.1885
+residual sugar,sulphates,-0.1859
+free sulfur dioxide,alcohol,-0.1798
+free sulfur dioxide,pH,-0.1459
+citric acid,residual sugar,0.1425
+citric acid,free sulfur dioxide,0.1331
+residual sugar,chlorides,-0.1289
+pH,alcohol,0.1212
+fixed acidity,residual sugar,-0.112
+citric acid,density,0.0962
+fixed acidity,alcohol,-0.0955
+citric acid,sulphates,0.0562
+chlorides,pH,0.0447
+citric acid,chlorides,0.039
+volatile acidity,alcohol,-0.0376
+total sulfur dioxide,density,0.0324
+free sulfur dioxide,density,0.0257
+density,pH,0.0117
+citric acid,alcohol,-0.0105
+sulphates,alcohol,-0.003
+fixed acidity,fixed acidity,
+volatile acidity,fixed acidity,
+volatile acidity,volatile acidity,
+citric acid,fixed acidity,
+citric acid,volatile acidity,
+citric acid,citric acid,
+residual sugar,fixed acidity,
+residual sugar,volatile acidity,
+residual sugar,citric acid,
+residual sugar,residual sugar,
+chlorides,fixed acidity,
+chlorides,volatile acidity,
+chlorides,citric acid,
+chlorides,residual sugar,
+chlorides,chlorides,
+free sulfur dioxide,fixed acidity,
+free sulfur dioxide,volatile acidity,
+free sulfur dioxide,citric acid,
+free sulfur dioxide,residual sugar,
+free sulfur dioxide,chlorides,
+free sulfur dioxide,free sulfur dioxide,
+total sulfur dioxide,fixed acidity,
+total sulfur dioxide,volatile acidity,
+total sulfur dioxide,citric acid,
+total sulfur dioxide,residual sugar,
+total sulfur dioxide,chlorides,
+total sulfur dioxide,free sulfur dioxide,
+total sulfur dioxide,total sulfur dioxide,
+density,fixed acidity,
+density,volatile acidity,
+density,citric acid,
+density,residual sugar,
+density,chlorides,
+density,free sulfur dioxide,
+density,total sulfur dioxide,
+density,density,
+pH,fixed acidity,
+pH,volatile acidity,
+pH,citric acid,
+pH,residual sugar,
+pH,chlorides,
+pH,free sulfur dioxide,
+pH,total sulfur dioxide,
+pH,density,
+pH,pH,
+sulphates,fixed acidity,
+sulphates,volatile acidity,
+sulphates,citric acid,
+sulphates,residual sugar,
+sulphates,chlorides,
+sulphates,free sulfur dioxide,
+sulphates,total sulfur dioxide,
+sulphates,density,
+sulphates,pH,
+sulphates,sulphates,
+alcohol,fixed acidity,
+alcohol,volatile acidity,
+alcohol,citric acid,
+alcohol,residual sugar,
+alcohol,chlorides,
+alcohol,free sulfur dioxide,
+alcohol,total sulfur dioxide,
+alcohol,density,
+alcohol,pH,
+alcohol,sulphates,
+alcohol,alcohol,

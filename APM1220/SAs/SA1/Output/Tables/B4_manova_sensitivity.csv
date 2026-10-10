@@ -1,0 +1,7 @@
+analysis,N,Pillai_V,F,p
+Primary analysis,6497,0.763,3481.8144,0.0
+log10-transformed DVs,6497,0.8071,4525.621,0.0
+Multivariate outliers removed,6321,0.8138,4600.2543,0.0
+Duplicate rows removed,5320,0.756,2744.324,0.0
+"Balanced subsample (1,599 vs 1,599)",3198,0.7883,1979.8544,0.0
+Eight-DV set (adds alcohol and density),6497,0.8526,4692.1557,0.0

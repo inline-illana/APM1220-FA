@@ -1,0 +1,5 @@
+test,value,F,df1,df2,p
+Wilks' lambda,0.237,3481.8144,6.0,6490.0,0.0
+Pillai's trace,0.763,3481.8144,6.0,6490.0,0.0
+Hotelling-Lawley trace,3.2189,3481.8144,6.0,6490.0,0.0
+Roy's greatest root,3.2189,3481.8144,6.0,6490.0,0.0
