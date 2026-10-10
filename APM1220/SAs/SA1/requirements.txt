@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+statsmodels
+scikit-learn
+matplotlib
+seaborn
+pingouin
+factor_analyzer
+ucimlrepo
+reportlab
+pillow
