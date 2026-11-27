@@ -1,0 +1,12 @@
+# Formative Assessment 6: Discrimination and Classification (LDA and QDA)
+
+## Dataset Source
+UCI Machine Learning Repository — Seeds Dataset: https://archive.ics.uci.edu/dataset/236/seeds (210 observations across Kama, Rosa, and Canadian wheat varieties; 7 continuous geometrical predictors).
+
+## Description of Analysis
+Explores the 7 geometrical wheat kernel variables, checks univariate/multivariate normality and Box's M-test for covariance homogeneity, fits LDA and QDA on an identical 70/30 stratified split (`random_state=42`), and evaluates test and 5-fold stratified cross-validation performance (accuracy, misclassification rate, and one-versus-rest sensitivity and specificity).
+
+## Instructions for Reproducing Results
+1. Open `Formative_Assessment_6_LDA_QDA.ipynb` in Google Colab (or Jupyter).
+2. Optionally place `seeds_dataset.txt` in the working directory (the notebook also includes the exact 210-row dataset fallback).
+3. Run all cells sequentially from top to bottom (`random_state=42`).
